@@ -17,18 +17,19 @@ export default async function PokemonPage({
       <Image
         src={especificPokemon.sprites.front_default}
         alt="Pokemon Image"
-        width={200}
-        height={200}
+        width={240}
+        height={240}
         priority
       ></Image>
-      <p>Weight: {especificPokemon.weight}</p>
-
-      {stats.map(({ base_stat, stat }) => (
-        <div className="flex">
-          <h1>{stat.name}: </h1>
-          <h1>{base_stat}</h1>
-        </div>
-      ))}
+      <div className='grid grid-cols-3 gap-8 -mt-3'>
+        <p className='font-geist2 text-2xl' >Weight: {especificPokemon.weight}</p>
+        {stats.map(({ base_stat, stat }) => (
+          <div className="flex">
+            <h1 className='font-geist2 text-2xl' >{stat.name}: </h1>
+            <h1 className='font-geist2 text-2xl' >{base_stat}</h1>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
