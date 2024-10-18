@@ -2,10 +2,20 @@ interface prop {
   name: string
 }
 
-export default function PokeCard ({name}: prop) {
+import pokeball from '@/public/images/ball.png'
+
+import Image from 'next/image'
+import Link from 'next/link'
+
+export default function PokeCard({ name }: prop) {
   return (
-    <div className="pt-3 pl-3 w-80 h-28 border-2 border-yellow-300 rounded-2xl">
-      <h2 className="font-geist text-yellow-300" >{name}</h2>
-    </div>
+    <Link
+      href="/"
+      className="w-80 h-32 border-2 border-white bg-blue-800 rounded-2xl flex justify-center items-center gap-3 hover:cursor-pointer"
+    >
+      <Image width={40} alt="pokeball image" src={pokeball}></Image>
+      <div className="border-2 h-20 border-white"></div>
+      <h2 className="font-geist text-white text-4xl">{name}</h2>
+    </Link>
   )
 }
