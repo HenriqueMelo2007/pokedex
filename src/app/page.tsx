@@ -16,7 +16,7 @@ export default function Home() {
         className="mb-16 ml-8"
       ></Image>
 
-      <div className="flex justify-center items-center flex-col">
+      <div className="flex justify-center items-center flex-col w-screen">
         <div className='relative flex justify-center items-center flex-col mb-16'>
           <Image
             src={pikachuPNG}
