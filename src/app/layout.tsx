@@ -3,6 +3,10 @@ import { Roboto } from 'next/font/google'
 import localFont from "next/font/local";
 import './globals.css'
 
+import Image from 'next/image'
+import Link from 'next/link'
+import poke from '@/public/images/poke.png'
+
 const roboto = Roboto({
   weight: ['400', '700'],
   subsets: ['latin'], 
@@ -30,6 +34,14 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${geistHollow.variable} antialiased bg-black w-screen p-0 m-0 box-border font-roboto`}
       >
+        <Link href="/">
+        <Image
+          src={poke}
+          width={230}
+          alt="PokemonAPI logo"
+          className="mt-8 mb-16 ml-8"
+        ></Image>
+      </Link>
         {children}
       </body>
     </html>

@@ -6,3 +6,10 @@ export async function getAll() {
   )
   return response.results;
 }
+
+export async function getPokemonInfo(name: string) {
+  const response = await fetch(`${url}pokemon/${name}`).then(
+    response => response.json()
+  )
+  return response;
+}
