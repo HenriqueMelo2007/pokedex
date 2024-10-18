@@ -5,7 +5,6 @@ import pikachuPNG from '@/public/images/pkcPNG.png'
 import Input from '@/components/input'
 import PokeGrid from '@/components/pokegrid'
 
-import PokeCard from "@/components/pokecard"
 
 export default function Home() {
   return (
@@ -28,7 +27,6 @@ export default function Home() {
           <Input></Input>
         </div>
         <PokeGrid></PokeGrid>
-        <PokeCard name="Bulbassaur"></PokeCard>
       </div>
     </div>
   )
