@@ -4,8 +4,8 @@ interface prop {
 
 export default function PokeCard ({name}: prop) {
   return (
-    <div className="w-96 h-40 border-2 border-yellow-300 ">
-      <h2>{name}</h2>
+    <div className="pt-3 pl-3 w-80 h-28 border-2 border-yellow-300 rounded-2xl">
+      <h2 className="font-geist text-yellow-300" >{name}</h2>
     </div>
   )
 }

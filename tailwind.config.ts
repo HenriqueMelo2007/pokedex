@@ -14,6 +14,7 @@ const config: Config = {
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
+        geist: ['var(--font-geist-sans)'],
       },
       margin: {
         mPKC: "275px",

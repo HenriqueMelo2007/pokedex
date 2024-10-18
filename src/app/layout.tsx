@@ -1,13 +1,19 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
+import localFont from "next/font/local";
 import './globals.css'
 
-// Importando a fonte Roboto do Google
 const roboto = Roboto({
   weight: ['400', '700'],
   subsets: ['latin'], 
   variable: '--font-roboto', 
 })
+
+const geistHollow = localFont({
+  src: "./fonts/Pokemon Hollow.ttf",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
 
 export const metadata: Metadata = {
   title: 'Pokedex',
@@ -22,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${roboto.variable} antialiased bg-black w-screen p-0 m-0 box-border font-roboto`}
+        className={`${roboto.variable} ${geistHollow.variable} antialiased bg-black w-screen p-0 m-0 box-border font-roboto`}
       >
         {children}
       </body>
